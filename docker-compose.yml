@@ -1,0 +1,20 @@
+services:
+  chore-tracker:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - chore-data:/app/data
+    environment:
+      - DB_PATH=/app/data/artemis.db
+      - USER_NAME=${USER_NAME:-admin}
+      - USER_PASS=${USER_PASS:-changeme}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  chore-data:
