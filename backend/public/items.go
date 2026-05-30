@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"artemis/api"
+	"hestia/api"
 	"github.com/go-chi/chi/v5"
 )
 

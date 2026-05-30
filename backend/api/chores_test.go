@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/go-chi/chi/v5"
-	"artemis/db"
-	"artemis/middleware"
+	"hestia/db"
+	"hestia/middleware"
 )
 
 type testSetup struct {
@@ -42,7 +42,7 @@ func (ts *testSetup) request(t *testing.T, method, path string, body []byte) *ht
 	} else {
 		r = httptest.NewRequest(method, path, nil)
 	}
-	r.AddCookie(&http.Cookie{Name: "artemis_session", Value: ts.SessionToken})
+	r.AddCookie(&http.Cookie{Name: "hestia_session", Value: ts.SessionToken})
 	rec := httptest.NewRecorder()
 
 	router := chi.NewRouter()

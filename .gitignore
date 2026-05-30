@@ -12,7 +12,7 @@ dev.sh
 !.env.example
 
 # Go
-backend/artemis
+backend/hestia
 backend/data/
 *.coverage
 

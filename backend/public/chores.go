@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"artemis/api"
-	"artemis/models"
+	"hestia/api"
+	"hestia/models"
 	"github.com/go-chi/chi/v5"
 )
 

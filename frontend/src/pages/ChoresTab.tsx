@@ -44,7 +44,7 @@ export function ChoresTab({ path: _path }: { path?: string }) {
     <div>
       <div class="flex justify-between items-center p-2">
         <h2>Chores</h2>
-        <button class="p-2 border border-current rounded bg-transparent text-artemis-text hover:bg-artemis-primary hover:text-white" onClick={() => window.dispatchEvent(new Event('open-settings-modal'))}>
+        <button class="p-2 border border-current rounded bg-transparent text-hestia-text hover:bg-hestia-primary hover:text-white" onClick={() => window.dispatchEvent(new Event('open-settings-modal'))}>
           <Settings />
         </button>
       </div>

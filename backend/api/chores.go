@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"artemis/models"
+	"hestia/models"
 )
 
 // JSON sets the content type and writes JSON response.

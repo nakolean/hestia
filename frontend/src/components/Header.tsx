@@ -8,8 +8,8 @@ export function Header() {
   return (
     <header class="app-header">
       <div class="container-wrapper">
-        <h1 style="margin:0">Artemis</h1>
-        <button class="p-2 border border-current rounded bg-transparent text-artemis-text hover:bg-artemis-primary hover:text-white" onClick={openSettings}>
+        <h1 style="margin:0">Hestia</h1>
+        <button class="p-2 border border-current rounded bg-transparent text-hestia-text hover:bg-hestia-primary hover:text-white" onClick={openSettings}>
           <Settings />
         </button>
       </div>

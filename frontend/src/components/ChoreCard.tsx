@@ -59,10 +59,10 @@ export function ChoreCard({ chore, onComplete }: Props) {
       <div class="flex justify-between items-center">
         <div>
           <h3 class="m-0 text-lg font-semibold">{chore.name}</h3>
-          {chore.description && <p class="text-artemis-text-muted text-sm m-0">{chore.description}</p>}
-          <p class="text-artemis-text-muted text-xs m-0">{formatCountdown(chore)} · {chore.frequency_num} {chore.frequency_unit}</p>
+          {chore.description && <p class="text-hestia-text-muted text-sm m-0">{chore.description}</p>}
+          <p class="text-hestia-text-muted text-xs m-0">{formatCountdown(chore)} · {chore.frequency_num} {chore.frequency_unit}</p>
         </div>
-        <button class="px-4 py-2 border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={() => onComplete(chore.id)}>
+        <button class="px-4 py-2 border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={() => onComplete(chore.id)}>
           Complete
         </button>
       </div>

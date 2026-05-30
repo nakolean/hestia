@@ -48,7 +48,7 @@ export function ShoppingTab({ path: _path }: { path?: string }) {
     <div>
       <div class="flex justify-between items-center p-2">
         <h2>Shopping List</h2>
-        <button class="p-2 border border-current rounded bg-transparent text-artemis-text hover:bg-artemis-primary hover:text-white" onClick={() => window.dispatchEvent(new Event('open-settings-modal'))}>
+        <button class="p-2 border border-current rounded bg-transparent text-hestia-text hover:bg-hestia-primary hover:text-white" onClick={() => window.dispatchEvent(new Event('open-settings-modal'))}>
           <Settings />
         </button>
       </div>
@@ -60,7 +60,7 @@ export function ShoppingTab({ path: _path }: { path?: string }) {
           <ShoppingItemRow key={item.id} item={item} onToggle={togglePurchased} onDelete={deleteItem} />
         ))}
       </div>
-      {!items.length && <p class="text-artemis-text-muted">No items yet. Use the + button to add one.</p>}
+      {!items.length && <p class="text-hestia-text-muted">No items yet. Use the + button to add one.</p>}
     </div>
   )
 }

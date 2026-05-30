@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"artemis/middleware"
+	"hestia/middleware"
 )
 
 // JSON sets Content-Type and writes JSON response.

@@ -38,7 +38,7 @@ export function LoginScreen() {
 
   return (
     <div class="flex flex-col items-center justify-center h-screen gap-4">
-      <h1>Artemis</h1>
+      <h1>Hestia</h1>
       <form onSubmit={handleSubmit} class="flex flex-col gap-3 w-[280px]">
         <input
           type="text"
@@ -46,7 +46,7 @@ export function LoginScreen() {
           value={username}
           onChange={e => setUsername((e.target as HTMLInputElement).value)}
           required
-          class="border border-artemis-border rounded p-2"
+          class="border border-hestia-border rounded p-2"
         />
         <input
           type="password"
@@ -54,10 +54,10 @@ export function LoginScreen() {
           value={password}
           onChange={e => setPassword((e.target as HTMLInputElement).value)}
           required
-          class="border border-artemis-border rounded p-2"
+          class="border border-hestia-border rounded p-2"
         />
         {error && <p class="text-red-500">{error}</p>}
-        <button type="submit" disabled={loading} class="px-4 py-2 bg-artemis-primary text-white rounded">
+        <button type="submit" disabled={loading} class="px-4 py-2 bg-hestia-primary text-white rounded">
           {loading ? 'Logging in...' : 'Login'}
         </button>
       </form>

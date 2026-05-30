@@ -14,15 +14,15 @@ interface Props {
 
 export function ShoppingItemRow({ item, onToggle, onDelete }: Props) {
   return (
-    <div class="grid grid-cols-2 gap-2 p-3 border border-artemis-border mb-1" style={{
+    <div class="grid grid-cols-2 gap-2 p-3 border border-hestia-border mb-1" style={{
       textDecoration: item.purchased ? 'line-through' : 'none',
-      color: item.purchased ? 'var(--artemis-text-muted)' : 'inherit',
+      color: item.purchased ? 'var(--hestia-text-muted)' : 'inherit',
     }}>
       <label class="col-span-1 flex items-center gap-2 cursor-pointer">
         <input type="checkbox" checked={item.purchased} onChange={() => onToggle(item.id, !item.purchased)} />
         <span>{item.text}</span>
       </label>
-      <button class="text-xs px-2 py-1 border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={() => onDelete(item.id)}>✕</button>
+      <button class="text-xs px-2 py-1 border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={() => onDelete(item.id)}>✕</button>
     </div>
   )
 }

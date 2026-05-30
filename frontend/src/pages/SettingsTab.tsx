@@ -12,7 +12,7 @@ export function SettingsModal({ onClose }: SettingsModalProps) {
           <h2>Settings</h2>
           <ApiKeyManager />
           <div class="grid grid-cols-2 gap-2">
-            <button class="px-4 py-2 border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={onClose}>Close</button>
+            <button class="px-4 py-2 border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={onClose}>Close</button>
           </div>
         </div>
       </div>

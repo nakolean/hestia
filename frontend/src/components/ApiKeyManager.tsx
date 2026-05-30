@@ -62,42 +62,42 @@ export function ApiKeyManager() {
         <div class="grid grid-cols-2 gap-2 mb-2">
           <label class="block">
             Name
-            <input class="w-full border border-artemis-border rounded p-2" value={newName} onInput={e => setNewName((e.target as HTMLInputElement).value)} placeholder="My key" required />
+            <input class="w-full border border-hestia-border rounded p-2" value={newName} onInput={e => setNewName((e.target as HTMLInputElement).value)} placeholder="My key" required />
           </label>
           <label class="block">
             Permissions
-            <select class="w-full border border-artemis-border rounded p-2" value={newPerm} onChange={e => setNewPerm((e.target as HTMLSelectElement).value as 'read' | 'write' | 'full')}>
+            <select class="w-full border border-hestia-border rounded p-2" value={newPerm} onChange={e => setNewPerm((e.target as HTMLSelectElement).value as 'read' | 'write' | 'full')}>
               <option value="read">read</option>
               <option value="write">write</option>
               <option value="full">full</option>
             </select>
           </label>
         </div>
-        <button type="submit" class="px-4 py-2 bg-artemis-primary text-white rounded">Generate Key</button>
+        <button type="submit" class="px-4 py-2 bg-hestia-primary text-white rounded">Generate Key</button>
       </form>
 
       {rawKeyDisplay && (
-        <div class="bg-artemis-primary/10 p-4 mt-4 rounded" style="background:rgba(1,114,173,0.1)">
+        <div class="bg-hestia-primary/10 p-4 mt-4 rounded" style="background:rgba(1,114,173,0.1)">
           <strong>Save now — this key cannot be viewed again!</strong>
           <code class="block mt-2 break-all font-mono">{rawKeyDisplay}</code>
-          <button class="mt-2 px-3 py-1 text-sm border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={() => setRawKeyDisplay(null)}>Dismiss</button>
+          <button class="mt-2 px-3 py-1 text-sm border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={() => setRawKeyDisplay(null)}>Dismiss</button>
         </div>
       )}
 
       {error && <small class="text-red-500">{error}</small>}
 
       <h4 class="text-base font-semibold">Existing Keys</h4>
-      {keys.length === 0 ? <p class="text-artemis-text-muted">No keys created yet.</p> : (
+      {keys.length === 0 ? <p class="text-hestia-text-muted">No keys created yet.</p> : (
         keys.map(key => (
-          <div key={key.id} class="mb-2 border border-artemis-border rounded p-3">
+          <div key={key.id} class="mb-2 border border-hestia-border rounded p-3">
             <div class="flex justify-between items-center">
               <div>
-                <strong>{key.name}</strong> <em class="text-artemis-text-muted" style="font-style:normal">({key.permissions})</em>
-                <div class="text-xs text-artemis-text-muted">
+                <strong>{key.name}</strong> <em class="text-hestia-text-muted" style="font-style:normal">({key.permissions})</em>
+                <div class="text-xs text-hestia-text-muted">
                   {key.last_used_at ? `last used ${new Date(key.last_used_at).toLocaleString()}` : 'never used'}
                 </div>
               </div>
-              <button class="text-xs px-2 py-1 border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={() => handleDelete(key.id)}>Revoke</button>
+              <button class="text-xs px-2 py-1 border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={() => handleDelete(key.id)}>Revoke</button>
             </div>
           </div>
         ))

@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"artemis/models"
+	"hestia/models"
 )
 
 func RegisterItems(r chi.Router, db *sql.DB) {

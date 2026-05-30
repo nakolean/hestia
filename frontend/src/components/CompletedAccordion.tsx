@@ -19,11 +19,11 @@ export function CompletedAccordion({ completed, onUndo }: Props) {
         </summary>
         <div>
           {completed.map(chore => (
-            <div key={chore.id} class="grid grid-cols-2 gap-2 p-2 border-t border-artemis-border opacity-60">
+            <div key={chore.id} class="grid grid-cols-2 gap-2 p-2 border-t border-hestia-border opacity-60">
               <span>{chore.name}</span>
               <small>{chore.last_completed ? new Date(chore.last_completed).toLocaleString() : '-'}</small>
               {onUndo && (
-                <button class="text-xs px-2 py-1 border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={() => onUndo(chore.id)}>Undo</button>
+                <button class="text-xs px-2 py-1 border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={() => onUndo(chore.id)}>Undo</button>
               )}
             </div>
           ))}

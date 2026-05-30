@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"artemis/middleware"
+	"hestia/middleware"
 )
 
 // ValidateLogin checks credentials and returns true if valid

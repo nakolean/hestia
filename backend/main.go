@@ -12,20 +12,20 @@ import (
 	"github.com/go-chi/cors"
 	chimiddleware "github.com/go-chi/chi/v5/middleware"
 
-	"artemis/admin"
-	"artemis/api"
-	"artemis/auth"
-	"artemis/db"
-	"artemis/middleware"
-	"artemis/public"
-	"artemis/services"
+	"hestia/admin"
+	"hestia/api"
+	"hestia/auth"
+	"hestia/db"
+	"hestia/middleware"
+	"hestia/public"
+	"hestia/services"
 )
 
 func main() {
 	// Open database
 	databasePath := os.Getenv("DB_PATH")
 	if databasePath == "" {
-		databasePath = "data/artemis.db"
+		databasePath = "data/hestia.db"
 	}
 	sqlDB, err := db.Open(databasePath)
 	if err != nil {

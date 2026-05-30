@@ -47,7 +47,7 @@ func TestRequireSessionWithCookie(t *testing.T) {
 	}))
 
 	req := httptest.NewRequest("GET", "/api/chores", nil)
-	req.AddCookie(&http.Cookie{Name: "artemis_session", Value: token})
+	req.AddCookie(&http.Cookie{Name: "hestia_session", Value: token})
 	rec := httptest.NewRecorder()
 	handler.ServeHTTP(rec, req)
 	if rec.Code != http.StatusOK {

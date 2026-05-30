@@ -6,19 +6,19 @@
   /* Bottom nav */
   .bottom-nav {
     position: fixed; bottom: 0; width: 100%; display: flex;
-    background: var(--artemis-surface);
-    border-top: 1px solid var(--artemis-border);
+    background: var(--hestia-surface);
+    border-top: 1px solid var(--hestia-border);
   }
   .bottom-nav a {
-    flex: 1; padding: 12px; border: none; background: none; font-size: 1rem; text-align: center; text-decoration: none; color: var(--artemis-text);
+    flex: 1; padding: 12px; border: none; background: none; font-size: 1rem; text-align: center; text-decoration: none; color: var(--hestia-text);
   }
-  .bottom-nav a.active { background: var(--artemis-primary); color: var(--artemis-primary-inverse); }
+  .bottom-nav a.active { background: var(--hestia-primary); color: var(--hestia-primary-inverse); }
 
   /* FAB */
   .app-fab {
     position: fixed; display: flex; align-items: center; justify-content: center;
     bottom: 70px; right: 20px; width: 56px; height: 56px;
-    border-radius: 50%; background: var(--artemis-primary); color: var(--artemis-primary-inverse);
+    border-radius: 50%; background: var(--hestia-primary); color: var(--hestia-primary-inverse);
     font-size: 1.5rem; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     cursor: pointer;
   }
@@ -26,7 +26,7 @@
   /* Header */
   .app-header {
     padding: 0.5rem 1rem;
-    border-bottom: 1px solid var(--artemis-border);
+    border-bottom: 1px solid var(--hestia-border);
   }
   .app-header .container-wrapper {
     display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; padding: 0 1rem;

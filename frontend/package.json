@@ -1,5 +1,5 @@
 {
-  "name": "artemis-frontend",
+  "name": "hestia-frontend",
   "private": true,
   "type": "module",
   "scripts": {

@@ -39,18 +39,18 @@ export function AddModal({ mode, onClose }: AddModalProps) {
           <form onSubmit={handleSubmit}>
             <label class="block mb-2">
               {mode === 'chore' ? 'Name' : 'Item'}
-              <input autofocus class="w-full border border-artemis-border rounded p-2" value={name} onInput={e => setName((e.target as HTMLInputElement).value)} placeholder={mode === 'chore' ? 'e.g., Water plants' : 'e.g., Milk'} required />
+              <input autofocus class="w-full border border-hestia-border rounded p-2" value={name} onInput={e => setName((e.target as HTMLInputElement).value)} placeholder={mode === 'chore' ? 'e.g., Water plants' : 'e.g., Milk'} required />
             </label>
             {mode === 'chore' && (
               <>
                 <label class="block mb-2">
                   Description
-                  <input class="w-full border border-artemis-border rounded p-2" value={desc} onInput={e => setDesc((e.target as HTMLInputElement).value)} placeholder="Optional" />
+                  <input class="w-full border border-hestia-border rounded p-2" value={desc} onInput={e => setDesc((e.target as HTMLInputElement).value)} placeholder="Optional" />
                 </label>
                 <label class="block mb-2">
                   Repeat every
-                  <input type="number" min="1" class="border border-artemis-border rounded p-2" value={freqNum} onInput={e => setFreqNum(parseInt((e.target as HTMLInputElement).value || '1'))} />
-                  <select class="border border-artemis-border rounded p-2" value={freqUnit} onChange={e => setFreqUnit((e.target as HTMLSelectElement).value)}>
+                  <input type="number" min="1" class="border border-hestia-border rounded p-2" value={freqNum} onInput={e => setFreqNum(parseInt((e.target as HTMLInputElement).value || '1'))} />
+                  <select class="border border-hestia-border rounded p-2" value={freqUnit} onChange={e => setFreqUnit((e.target as HTMLSelectElement).value)}>
                     <option value="hours">hours</option>
                     <option value="days">days</option>
                     <option value="weeks">weeks</option>
@@ -60,8 +60,8 @@ export function AddModal({ mode, onClose }: AddModalProps) {
             )}
             {error && <small class="text-red-500">{error}</small>}
             <div class="grid grid-cols-2 gap-2">
-              <button type="submit" class="px-4 py-2 bg-artemis-primary text-white rounded">Save</button>
-              <button type="button" class="px-4 py-2 border border-current rounded bg-transparent hover:bg-artemis-primary hover:text-white" onClick={onClose}>Cancel</button>
+              <button type="submit" class="px-4 py-2 bg-hestia-primary text-white rounded">Save</button>
+              <button type="button" class="px-4 py-2 border border-current rounded bg-transparent hover:bg-hestia-primary hover:text-white" onClick={onClose}>Cancel</button>
             </div>
           </form>
         </div>

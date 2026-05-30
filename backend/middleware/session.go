@@ -68,7 +68,7 @@ func (s *SessionStore) Cleanup() {
 	}
 }
 
-const sessionCookieName = "artemis_session"
+const sessionCookieName = "hestia_session"
 
 // SetSessionCookie sets the session cookie on the response.
 func SetSessionCookie(w http.ResponseWriter, sessionID string) {

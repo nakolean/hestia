@@ -1,4 +1,4 @@
-module artemis
+module hestia
 
 go 1.26.3
 

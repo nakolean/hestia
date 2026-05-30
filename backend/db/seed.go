@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"artemis/middleware"
+	"hestia/middleware"
 )
 
 func SeedInitialUser(db *sql.DB) error {

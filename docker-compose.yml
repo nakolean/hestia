@@ -6,7 +6,7 @@ services:
     volumes:
       - chore-data:/app/data
     environment:
-      - DB_PATH=/app/data/artemis.db
+      - DB_PATH=/app/data/hestia.db
       - USER_NAME=${USER_NAME:-admin}
       - USER_PASS=${USER_PASS:-changeme}
     restart: unless-stopped
