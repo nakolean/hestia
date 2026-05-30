@@ -1,25 +1,56 @@
 @layer components {
   /* App layout */
-  .app-shell { display: flex; flex-direction: column; min-height: 100vh; }
-  main { flex: 1; padding-bottom: 60px; padding: 1rem; }
+  .app-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    padding-bottom: 60px;
+    padding: 1rem;
+  }
 
   /* Bottom nav */
   .bottom-nav {
-    position: fixed; bottom: 0; width: 100%; display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
     background: var(--hestia-surface);
     border-top: 1px solid var(--hestia-border);
   }
   .bottom-nav a {
-    flex: 1; padding: 12px; border: none; background: none; font-size: 1rem; text-align: center; text-decoration: none; color: var(--hestia-text);
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--hestia-text);
   }
-  .bottom-nav a.active { background: var(--hestia-primary); color: var(--hestia-primary-inverse); }
+  .bottom-nav a.active {
+    background: var(--hestia-primary);
+    color: var(--hestia-primary-inverse);
+  }
 
   /* FAB */
   .app-fab {
-    position: fixed; display: flex; align-items: center; justify-content: center;
-    bottom: 70px; right: 20px; width: 56px; height: 56px;
-    border-radius: 50%; background: var(--hestia-primary); color: var(--hestia-primary-inverse);
-    font-size: 1.5rem; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 70px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--hestia-primary);
+    color: var(--hestia-primary-inverse);
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
 
@@ -29,7 +60,15 @@
     border-bottom: 1px solid var(--hestia-border);
   }
   .app-header .container-wrapper {
-    display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
-  .app-header h1 { margin: 0; font-size: 1.25rem; }
+  .app-header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
 }

@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color:
-    --color-hestia-primary: #0172ad;
+  --color: --color-hestia-primary: #0172ad;
   --color-hestia-primary-hover: #015887;
   --color-hestia-primary-inverse: #fff;
   --color-hestia-surface: #fff;

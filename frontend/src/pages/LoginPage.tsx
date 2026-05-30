@@ -1,40 +1,40 @@
-import { useState } from 'preact/hooks'
+import { useState } from "preact/hooks";
 
 async function tryLogin(username: string, password: string): Promise<boolean> {
   try {
-    const res = await fetch('/api/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
-    })
+    });
     if (res.ok) {
-      return true
+      return true;
     }
-    return false
+    return false;
   } catch {
-    return false
+    return false;
   }
 }
 
 export function LoginScreen() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: Event) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    const ok = await tryLogin(username, password)
+    const ok = await tryLogin(username, password);
     if (ok) {
-      window.location.reload()
+      window.location.reload();
     } else {
-      setError('Invalid username or password')
-      setLoading(false)
+      setError("Invalid username or password");
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div class="flex flex-col items-center justify-center h-screen gap-4">
@@ -44,7 +44,7 @@ export function LoginScreen() {
           type="text"
           placeholder="Username"
           value={username}
-          onChange={e => setUsername((e.target as HTMLInputElement).value)}
+          onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
           required
           class="border border-hestia-border rounded p-2"
         />
@@ -52,15 +52,19 @@ export function LoginScreen() {
           type="password"
           placeholder="Password"
           value={password}
-          onChange={e => setPassword((e.target as HTMLInputElement).value)}
+          onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
           required
           class="border border-hestia-border rounded p-2"
         />
         {error && <p class="text-red-500">{error}</p>}
-        <button type="submit" disabled={loading} class="px-4 py-2 bg-hestia-primary text-white rounded">
-          {loading ? 'Logging in...' : 'Login'}
+        <button
+          type="submit"
+          disabled={loading}
+          class="px-4 py-2 bg-hestia-primary text-white rounded"
+        >
+          {loading ? "Logging in..." : "Login"}
         </button>
       </form>
     </div>
-  )
+  );
 }
